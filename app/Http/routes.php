@@ -11,6 +11,19 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('notices', 'noticesController');
+
+
+
+Route:get('/home','PagesController@home');
+
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController',
+]);
